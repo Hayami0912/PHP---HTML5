@@ -1,36 +1,55 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
 <meta charset="utf-8"/>
-<title>Home Page</title>
+<title>Front Page</title>
 	
-	<link rel="stylesheet" href="css/theme.css" type="text/css" />
+	<link rel="stylesheet" href="theme.css" type="text/css" />
 	
 </head>
 <body>
 <div class="header">
 
-	<?php include "ssi/lab_assignment_nav.php"; ?>
+	<div class="lab_Assignment_nav">
+	<h4>Assignment</h4>
+		<ul>
+			<li>Assignment 1</li>
+			<li>Assignment 2</li>
+			<li>Assignment 3</li>
+			<li>Assignment 4</li>
+		</ul>
+	<br />
+	<h4>Practice</h4>
+		<ul>
+			<li>Lab Practice 1</li>
+			<li>Lab Practice 2</li>
+		</ul>
+	</div>
+
 
 <div class="MainContent">
+	<div class="headcontent">
+		<div class="SubContent1">
+			<div class="Professor">
+					<h4>IT207 (Semester 2021)</h4>
+					<p>Daniel Garrison</p>
+					<p>Geogre Mason University</p>
+			</div>
 
-	<?php include "ssi/SubContent1.php"; ?>
-	
+			<div class="Student">
+					<h4>Nate Nguyen</h4>
+					<p><a href="mailto:nnguye76@masonlive.gmu.edu">nnguye76@masonlive.gmu.edu</a></p>
+					<?php
+					// outputs e.g. 'Last modified: March 04 1998 20:43:59.'
+					echo "Last modified: " . date ("F d Y H:i:s.", getlastmod());
+					?>
+			</div>
+		</div>
+	</div>		
 	<div class="SubContent2">
 		<div class="GMU">
-			<br />
-			<br />
 			<img src="https://i.ibb.co/qMbFcZs/profile.png" width="250" height="250" alt="Profile Picture" />
-			<?php 
-
-				$birthday = new DateTime('2000-09-12');
-				$currentDate = new DateTime('now');
-
-				$interval = $birthday->diff($currentDate);
-
-				echo "<br />My age is: ", $interval->format('%y');
-			?>
-
+			<p>(Build-in Function Output)</p>
 		</div>
 
 		<div class="Summary">
@@ -49,12 +68,6 @@
 							<li>Knowledge driven</li>
 						</ul>
 				</ul>
-				<?php 
-			$Moto = array("Eat Well");
-			$Moto[] = "Sleep Well";
-			$Moto[] = "Study Well";
-			echo "<br />", print_r($Moto);
-			?>
 		</div>
 	</div>
 	<div class="SubContent3">
@@ -69,38 +82,19 @@
 				However, I have yet to get a chance to travel outside of the States ever since I moved; traveling might have to wait until school is over.
 				I am currently majored in IT concentrated in DTP and working as a junior network engineer for a MSSP.
 			</p>
-		<?php
-			function rainbow($text)
-			{
-				$text = html_entity_decode($text, ENT_QUOTES, 'UTF-8');
-				$return = '';
-				$colors = new InfiniteIterator(
-					new ArrayIterator(
-						['ff00ff', 'ff0099', 'ff0033', 'ff3300',
-						 'ff9900', 'ffff00', '99ff00', '33ff00',
-						 '00ff33', '00ff99', '00ffff', '0099ff',
-						 '0033ff', '3300ff', '9900ff']
-					)
-				);
-				$colors->rewind();
-				preg_match_all('/.\pM*+/su', $text, $matches);
-				foreach ($matches[0] as $char)
-				{
-					if (preg_match('/^\pZ$/u', $char)) {
-						$return .= $char;
-					} else {
-						$return .= "<span style='color:#{$colors->current()};'>$char</span>";
-						$colors->next();
-					}
-				}
-				return $return;
-			}
-			echo rainbow('Study, study more, study forever.');
-			?>
+			<p>(Build-in Function Output)</p>
 		</div>
 	</div>
-	<?php include "ssi/copyrights.php"; ?>
+	<div class="Copyright_Content">
+	  <p>This web site is entirely original work and full academic copyright is retained. This web site complies
+	    with the<a href="http://oai.gmu.edu/mason-honor-code/"> Mason Honor Code</a></p>
+    </div>
 </div>
 </div>	
+
+</div>
+</div>
+
+</div>
 </body>
 </html>

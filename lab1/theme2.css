@@ -1,0 +1,85 @@
+p { font-family: sans-serif };
+h1,h2,h4 { font-family: sans-serif };
+
+*{
+box-sizing: border-box;
+border: 1px solid black;
+}
+
+.header 
+{
+border: 1px solid black;
+width: 100%;
+
+}
+
+.Lab_Assignment
+{
+width: 25%;
+height:500px;
+float:left;
+border: 1px solid black;
+}
+.MainContent
+{
+width: 75%;
+float:left;
+border: 1px solid black;
+height:500px;
+  
+}
+
+.SubContent1
+{
+height:30%;
+padding:10px;
+border: 1px solid black;
+padding:20px;
+}
+.Professor
+{
+width:50%;
+height:120px;
+float:left;
+text-align:center;
+}
+.Student
+{
+width:50%;
+float:left;
+height:120px;
+text-align:center;
+}
+
+.SubContent2
+{
+height:55%;
+border: 1px solid black;
+}
+
+.GMU
+{
+height:30%;
+border: 1px solid black;
+}
+
+.Summary
+{
+height:50%;
+border: 1px solid black;
+}
+
+.paragraph
+{
+float:left;
+height:30%;
+border: 1px solid black;
+}
+
+
+
+.Copyright_Content
+{
+height:15%;
+}
+

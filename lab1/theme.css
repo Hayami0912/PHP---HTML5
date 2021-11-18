@@ -1,0 +1,144 @@
+h3 {color: white; font-size: 300%; font-family: 'Brush Script MT', cursive}
+h5 {font-family: Copperplate, Papyrus, fantasy}
+p {color: #1287A8; font-style: italic, bold}
+h4 {font-family: font-style: bold}
+
+.header 
+{
+width: 100%;
+height: 100%;
+}
+
+.lab_Assignment_nav
+{
+background-color: #2E8B57;
+width: 15%;
+height: 950px;
+float: left;
+border: 2px solid black;
+}
+.MainContent
+{
+position:relative;
+width: 82%;
+float:left;
+height: 950px;
+}
+
+.headcontent
+{
+position: relative;
+width: 100%;
+height: 15%;
+float: left;
+}
+.SubContent1
+{
+position: relative;
+height: 100%;
+width: 100%;
+}
+
+.Professor
+{
+position: relative;
+background-color: #FFFF00;
+text-align: center;
+width: 49.5%;
+height: 100%;
+float: left;
+border: 2px solid black;
+}
+
+.Student
+{
+position: relative;
+background-color: #66CDAA;
+text-align: center;
+width: 49.5%;
+float: left;
+height: 100%;
+text-align: center;
+border: 2px solid black;
+font-style: bold;
+}
+
+.SubContent2
+{
+position: relative;
+height:80%;
+width:30%;
+top: 0.5%;
+float: left;
+border-right: 2px solid black;
+border-left: 1px solid black;
+}
+
+.GMU
+{
+background-color: #FFFF00;
+text-align: center;
+width: 100%;
+height: 50%;
+font-style: italic;
+float:left;
+}
+
+.Summary
+{
+background-color: red;
+width: 100%;
+height: 50%;
+font-family: Bradley Hand, cursive;
+float: left;
+border: 2px solid black;
+}
+
+.SubContent3
+{
+position: relative;
+width: 69.5%;
+height: 80%;
+left: 30.2%;
+top: 15.4%;
+right: 10%;
+}
+
+.Paragraph
+{
+position:relative;
+background-image: url('https://lh3.googleusercontent.com/proxy/KiLjogq1z5x4yaDcFpUfZPKFKmSGyU9ttA_NGjfGkmXrsE5Nihu258kfBpQamvTWJJw=s0-d');
+width: 97.5%;
+height: 100%;
+font-family: Apple Chancery, cursive;
+text-align:center;
+padding-right: 2.2%;
+border: 2px solid black;
+}
+
+.lab_activity
+{
+float: left;
+padding-top: 5%;
+padding-left: 5%;
+}
+
+.method1
+{
+float: left;
+padding-top: 5%;
+padding-left: 5%;
+}
+
+.Copyright_Content
+{
+position: fixed;
+bottom: 0;
+height: 5%;
+width: 80.7%;
+background-color: #FFC0CB;
+text-align: center;
+border: 2px solid black;
+}
+
+

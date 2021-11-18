@@ -2,9 +2,9 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
 <meta charset="utf-8"/>
-<title>Home Page</title>
+<title>Front Page</title>
 	
-	<link rel="stylesheet" href="css/theme.css" type="text/css" />
+	<link rel="stylesheet" href="theme.css" type="text/css" />
 	
 </head>
 <body>
@@ -102,5 +102,6 @@
 	<?php include "ssi/copyrights.php"; ?>
 </div>
 </div>	
+
 </body>
 </html>

@@ -1,0 +1,49 @@
+.top
+{
+font-style: bold;
+font-size: 16pt;
+width: 40%;
+background-color: #d5dfe5;
+padding-top: 10px;
+padding-bottom: 10px;
+}
+
+.body
+{
+top:30%;
+height: 30%;	
+position: relative;
+width: 40%;
+background-color: #60899f;
+padding-top: 10px;
+padding-bottom: 10px;
+}
+
+.bot
+{
+position: relative;
+width: 40%;
+color: black;
+background-color: #aec3ce;
+text-align: right;
+padding-top: 10px;
+padding-bottom: 10px;
+}
+
+h2 
+{
+color: black;
+}
+
+h4 
+{
+background-color: #afc4cf;
+}
+
+h3 {
+color: black;
+}
+p 
+{
+color: #7c9eb0;
+}

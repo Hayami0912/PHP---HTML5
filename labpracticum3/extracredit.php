@@ -2,15 +2,25 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <title>Lab Practicum 2</title>
+
+	<link rel="stylesheet" href="../css/theme.css" type="text/css" />
+	<link rel="stylesheet" href="../css/labpracticum2.css" type="text/css" />
 	
 </head>
-<div class="lab_activity">
+<div class="header">
+
+	<?php include "../ssi/lab_assignment_nav.php"; ?>
+
+<div class="MainContent">
+
+	<?php include "../ssi/SubContent1.php"; ?>
+	<div class="lab_activity">
 <br />
 <br />
-<h1>Online Quiz</h1>
+<h1>Extra Credit</h1>
 <?php
-$questionString=file_get_contents("labpracticum2/questions.txt");
-$answerString=file_get_contents("labpracticum2/answers.txt");
+$questionString=file_get_contents("extraquestions.txt");
+$answerString=file_get_contents("extraanswers.txt");
 $questionLines=explode("\n",$questionString);
 for($i=0;$i<(count($questionLines));$i++){
 	$questionArray=explode(";",$questionLines[$i]);
@@ -20,7 +30,7 @@ for($i=0;$i<(count($questionLines));$i++){
 }
 ?>
 
-<form action="labpracticum2.php?q=<?php echo count($questionLines); ?>" method="post">
+<form action="extracredit.php?q=<?php echo count($questionLines); ?>" method="post">
 
 <?php
 $answerLines=explode("\n",$answerString);
@@ -63,13 +73,15 @@ if(isset($_GET['q'])){
 		if($_POST['Question'.$row]==$_POST['Answer'.$row]){
 			$score++;
 		}
-
 	}
 $grade=round(($score/$_GET['q'])*100);
 }
 ?>
 <div id="Quiz_Grade">
 <font style='background-color:#7b8699' color=<?php if($grade>=80){ echo "green"; }else if(($grade<80)&&($grade>=60)){ echo "yellow"; }else if(($grade<60)&&($grade>=50)){ echo "red"; }else { echo "black"; } ?>> Your Quiz Grade is a: <?php echo $grade; ?>%</font><br>
+<br>
+<a href="../labpracticum2.php">Return to Online Quiz</a>
+</div>	
+<?php include "../ssi/copyrights.php"; ?>
 </div>
-<a href="labpracticum2/extracredit.php">Extra Credit</a>	
 </div>

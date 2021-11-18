@@ -1,0 +1,151 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Lab 01</title>
+
+<link rel="stylesheet" href="pr.css" type="text/css" type="text/css"/>
+
+</head>
+
+<body>
+
+<div id = 'nav'>
+<nav>
+<h1>Lab Assignments</h1>
+	<ul>
+	<li><a href = "http://helios.vse.gmu.edu/~puprety2/IT207/LAB1/">Assignment 1<a/></li>
+	<li><a href ="http://helios.vse.gmu.edu/~puprety2/IT207/LAB2/">Assignment 2</li>
+	<li><a href = "">Assignment 3<a/</li>
+	<li><a href = "http://helios.vse.gmu.edu/~puprety2/IT207/LAB4/">Assignment 4<a/></li>
+	</ul>
+<h1>Lab Practica</h1>
+	<ul>
+		<li><a href = "http://helios.vse.gmu.edu/~puprety2/IT207/Practicum%201/">Practicum 1</a></li>
+		<li><a href = "">Practicum 2</a></li>
+<h3><li><a href = "http://helios.vse.gmu.edu/~puprety2/IT207/practice%20lab/Homepage.php">HomePage</a> </li></h3>
+	
+	</ul>
+</nav>	<div id = 'class'>
+	<p><b>IT 207-003  Fall 2020 </b><br />
+	Hossein Kord<br />
+	George Mason University<br />
+	</p>
+</div><div id = "personal_info">
+<p><b>Puskar Uprety </b><br />
+    <a href="mailto:puprety2@masonlive.gmu.edu">puprety2@gmu.edu</a><br /> 
+
+Today's date is Monday 10th of November 2020 10:21:04 PM EST<br />Last modified: 08:15 AM Monday 10th of November 2020,  EST</p>
+</div>	
+
+<div id = 'MyDetails'>
+	<center><h2> Extra Credit Quiz <h2></center> 
+
+<?php
+
+$questionString=file_get_contents("questionsExtra.txt");
+$answerString=file_get_contents("answersExtra.txt");
+
+$questionLines=explode("\n",$questionString);
+
+for($i=0;$i<(count($questionLines)-1);$i++){
+	$questionArray=explode(";",$questionLines[$i]);
+	
+	$question[$i]["question"]=$questionArray[2];
+	$question[$i]["id"]=$questionArray[1];
+	$question[$i]["row"]=$questionArray[0];
+}
+?>
+
+
+<form action="extraCreditForm.php?q=<?php echo count($questionLines)-1; ?>" method="post">
+<?php
+$answerLines=explode("\n",$answerString);
+
+
+$row=1;
+
+$counter=0;
+
+for($i=0;$i<(count($answerLines));$i++){
+	$answerArray=explode(",",$answerLines[$i]);
+
+	
+	if($answerArray[0]!=$row){
+		
+		$row=$answerArray[0];
+		$counter=0;
+	}
+
+	
+	$answer[$row][$counter]["answer"]=$answerArray[2];
+	$answer[$row][$counter]["id"]=$answerArray[1];
+	
+	$counter++;	
+	
+	
+	
+}
+
+$counter=1;
+
+for($i=0;$i<count($question);$i++){
+	$row=$question[$i]["row"];
+	echo "<div class='questionBlock'>";
+	echo $counter.". ".$question[$i]["question"]."<input type=hidden name='Question".$row."' value='".$question[$i]["id"]."'/>";	
+	echo "</div>";
+	echo "<div class='answerBlock'>";
+	for($n=0;$n<count($answer[$row]);$n++){
+		echo "<div class='choice'><input type='radio' id='".$answer[$row][$n]["id"]."' name='Answer".$row."' value='".$answer[$row][$n]["id"]."'>".$answer[$row][$n]["answer"]."</input></div>";
+	
+	}
+	echo "</div>";
+	echo "<br><br>";
+$counter++;	
+}
+?>
+
+
+
+	<input type="submit" value="Submit Quiz" />
+	<input type="reset" value="Reset Quiz"  onclick='window.reload()' /> <br><br>
+
+</form>
+<?php
+$score=0;
+$grade=0;
+if(isset($_GET['q'])){
+	for($i=0;$i<$_GET['q'];$i++){
+		$row=$question[$i]["row"];
+		if($_POST['Question'.$row]==$_POST['Answer'.$row]){
+			
+			$score++;
+		}
+
+	}
+$grade=round(($score/$_GET['q'])*100);
+	
+}
+
+
+
+?>
+
+<div id="Quiz_Grade">
+<font style='background-color:coral' color=<?php if($grade>=80){ echo "green"; }else if(($grade<80)&&($grade>=60)){ echo "yellow"; }else if(($grade<60)&&($grade>=50)){ echo "red"; }else { echo "black"; } ?>> Your Quiz Grade is a: <?php echo $grade; ?>% </font><br>
+<br>
+Last Modified: <?php echo date("Y-m-d H:i",getlastmod()); ?>
+<br>
+	<a href="http://helios.vse.gmu.edu/~ggalicia/IT207/LABP2/index.php"> Return to Home Page </a>		
+</p>
+	
+		
+
+</div>
+<div id = 'footer'>
+<footer>
+    <b>This web site is entirely original work and full academic copyright is retained. This web site complies with the
+	<a href= "https://oai.gmu.edu/mason-honor-code/"> Mason Honor Code.</a><b />
+</footer>
+</div>
+
+</body>
+</html>

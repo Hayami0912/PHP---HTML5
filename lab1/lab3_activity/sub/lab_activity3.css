@@ -1,0 +1,20 @@
+h2 
+{
+color: red;
+}
+.lab_activity
+{
+position: absolute;
+border-left: 2px black;
+top: 147px;
+height: 800px;
+width: 1035px;
+background-color: #9ff39d;
+}
+
+.new_contact_form
+{
+margin-left: 250px;
+text-align: left;
+}
+

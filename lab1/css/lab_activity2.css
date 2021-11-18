@@ -1,0 +1,54 @@
+h1
+{
+text-align: center; 
+color: red; 
+}
+table
+{
+border: 1px solid black;
+text-align: center;
+background-color: #D3D3D3;
+position: relative;
+}
+th,td
+{
+border: 1px solid black;
+text-align: center;
+background-color: #D3D3D3;
+position: relative;
+}
+
+td
+{
+width: 100px;
+height:100px;
+padding-top: 10px;
+padding-bottom: 15px;
+}
+
+.submit 
+{
+background-color: #4CAF50;
+border: none;
+color: white;
+padding: 10px 28px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 16px;
+position:relative;
+top: 20px;
+}
+.clear
+{ 
+background-color: #4CAF50;
+border: none;
+padding: 10px 28px;
+color: white;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 16px;
+position:relative;
+top: 20px;
+}

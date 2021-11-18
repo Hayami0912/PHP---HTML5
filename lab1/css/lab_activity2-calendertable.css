@@ -1,0 +1,36 @@
+.lab_activity
+{
+top: 50px;
+}
+h1 span
+{
+text-align: center; 
+color: red; 
+background-color: #00FF7F;
+}
+table
+{
+border: 1px solid black;
+text-align: center;
+background-color: #D3D3D3;
+position: relative;
+}
+th,td,tr
+{
+border: 1px solid black;
+text-align: center;
+background-color: #D3D3D3;
+position: relative;
+width: 80px;
+height:30px;
+padding-top: 10px;
+padding-bottom: 15px;
+}
+
+td
+{
+width: 80px;
+height:30px;
+padding-top: 10px;
+padding-bottom: 15px;
+}

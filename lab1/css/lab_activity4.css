@@ -1,0 +1,58 @@
+a3
+{
+color: white;
+text-decoration: underline;
+cursor: auto;
+}
+
+a2
+{
+color: red;
+text-decoration: underline;
+cursor: auto;
+}
+p
+{
+color: white;
+}
+h2
+{
+color: white;	
+}
+h1
+{
+color: white;
+}
+.lab_activity
+{
+position: absolute;
+border-left: 2px solid black;
+border-right: 2px solid black;
+top: 147px;
+height: 800px;
+width: 99.3%;
+background-color: #381c9c;
+text-align: left;
+}
+
+.button
+{
+text-align: center;
+background-color: #1287A8;
+border: none;
+color: white;
+padding: 10px 28px;
+text-decoration: none;
+display: inline-block;
+font-size: 14px;
+align-items: center;
+top: 20px;
+}
+
+
+.form
+{
+text-align: left;
+color: white;
+}
+

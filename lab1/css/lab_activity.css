@@ -1,0 +1,13 @@
+p {color: #1287A8; font-style: italic, bold; font-family: "Lucida Console", "Courier New", monospace;}
+h2{font-family: 'Brush Script MT', cursive color: blue;}
+
+.submit {
+  background-color: #4CAF50; 
+  border: none;
+  color: white;
+  padding: 10px 28px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}

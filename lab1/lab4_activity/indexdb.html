@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Comments Book</title>
+	<link rel="stylesheet" href="css/theme.css" type="text/css" />
+	<link rel="stylesheet" href="css/lab_activity4.css" type="text/css" />
+</head>	
+	<body>
+	<div class="lab_activity">
+		<h1>Huh?</h1>
+		<p>Kirschner and Karpinski report that:</p>
+		<p>Students who used social networking sites while studying scored 20% lower on tests and students who used social media had an average</p>
+		<p>GPA of 3.06 versus non-users who had an average GPA of 3.82.</p>
+		<p>Source: Paul A. Kirschner and Aryn C. Karpinski, "Facebook and Academic Performance," Computers in Human Behavior, Nov. 2010</p>
+		<h2>Add Comments</h2>
+		<hr />
+		<form action = "lab4_activity/addCommentsdb.php" method = "post" class="form">
+		 Name: <input type = "text" name = "name" required /><br/><br/>
+		 Email: <input type = "text" name = "email" required "/><br/><br/>
+		 Comments: <textarea name= "comments" rows = "4" cols="50" required /> </textarea><br/>
+		 <input type = "submit" value = "Sign"/>
+		 <input type = "reset" value = "Reset Form"/>
+		</form>
+		<hr />
+		<br/><a href = "lab4_activity/viewCommentsdb.php"><a3>View Posting Comments</a3></a>
+		<br/><a href = "assignment4.php"><a3>Textfile methods</a3></a>
+	</div>
+	</body>
+</html>
